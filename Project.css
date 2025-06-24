@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+   font-family: "Poppins", sans-serif;
+   background-color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    background-color: #f8f8f8;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav_logo a {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.logo span {
+    color: red;
+}
+
+.nav_links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav_links li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav_links li a:hover {
+    color: red;
+}
+
+.header {
+    padding-block: 5rem;
+    background-image: linear-gradient(rgba(124, 115, 115), rgba(124, 115, 115)), url(IMG/IMG_0430.JPG);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+
+@media (width > 540px) {
+    .header {
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+.header {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* this keeps the header and it spans and text inline(BEST OF KIN)*/
+
+.header_container {
+    text-align: center;
+    padding: 5rem 2rem;
+    color: white;
+}
+
+.header_container h1 {
+    margin-bottom: 1rem;
+    font-size: 5rem;
+    font-weight: 600;
+    line-height: 5rem;
+}
+
+.header_container h1 span {
+    font-size: 5rem;
+}
+
+.header_container p {
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    font-family: "Merriweather", serif;
+}
+
+/* this keeps the location search bar in check ps. the gap holds the space between the location icon and the search box.*/
+
+.header_container form {
+    display: flex;
+    justify-content: center;
+    padding-left: 75px;
+}
+
+.input_class {
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+    gap: 10px;
+}
+
+.input_class input {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* this one is for the search button.*/ 
+
+.input_class button {
+    padding: 0.75rem 1.5rem;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input_class button:hover {
+    background-color: #e84141;
+}
+
+/* these are for the feature containers text, images and all.*/
+
+.feature_container {
+    display: grid;
+    gap: 2rem;
+    padding-top: 40px;
+    padding-left: 20px;
+}
+
+.feature_card {
+    padding: 2rem 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: white;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.feature_card img {
+    max-width: 70px;
+}
+
+.feature_card h4 {
+    margin-bottom: .5rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.feature_card p {
+    color: var(--text-light);
+    line-height: 1.5rem;
+}
+
+.destination{
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.destination::before{
+    position: absolute;
+    content: "TRAVEL";
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-100%);
+    font-size: 20rem;
+    font-weight: 900;
+    line-height: 14rem;
+    letter-spacing: -30px;
+    color: white;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.destination_grid{
+    margin-top: 4rem;
+    display: grid;
+    gap: 1rem
+}
+
+.destination_card{
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+.destination_card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.destination_content{
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-content: center;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.destination_card:hover .destination_content {
+    opacity: 1;
+}
+
+.discount{
+    margin-top: 2rem;
+    background-image: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)), url(IMG/IMG_0415.JPG);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.discount_container{
+    text-align: center;
+}
+
+.discount_container h2 {
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    font-weight: 500;
+    font-family: var(--header-font);
+    color: white;
+}
+
+.discount_container h2 span {
+    font-size: 2rem;
+}
+
+/* the media rule is used to create responsive designes making the website layout able to adapt to diffrent screen and sizes like (phones and tablets etc).*/
+
+
+@media (width > 540px) {
+    .feature_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .destination_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (width > 768px) {
+    .feature_container {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.destination_grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+    
+}
+
+@media (width > 1024px) {
+    .destination_grid {
+        gap: 2rem;
+    }
+}
