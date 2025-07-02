@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    />
+    <script
+    src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    ></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <link rel="icon" type="image/PNG" href="IMG/IMG_0413.PNG">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tourrkin</title>
+</head>
+<body>
+    <nav>
+        <div class="nav_header">
+            <div class="nav_logo">
+                <a href="#" class="logo">Tourr<span>Kin</span></a>
+            </div>
+        </div>
+        <ul class="nav_links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#service>">Service</a></li>
+        </ul>
+    </nav>
+    <header class="header" id="Home">
+        <div class="header_container">
+            <h1>BEST <br /><span>OF KIN.</span></h1>
+            <p>Live your best moments </p>
+
+            <form id="locationForm">
+                <div class="input_class">
+                <span><i class="ri-map-pin-2-line"></i></span>
+                <input type="text" id="locationInput" placeholder="location" />
+                <button type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+    </header>
+
+    <section class="feature_container" id="Service">
+        <div class="feature_card">
+            <img src="IMG/tour.png" alt="feature" />
+        <div>
+        <h4>Best destinations</h4>
+        <p>Discover the most breathtaking views in kinshasa</p>
+        </div>
+    </div>
+
+        <div class="feature_card">
+            <img src="IMG/transaction.png" alt="feature" />
+        <div>
+        <h4>Best priceses Gauranteed</h4>
+        <p>Get the best priceses throughout your Entire stay</p>
+        </div>
+    </div>
+
+        <div class="feature_card">
+            <img src="IMG/tour-guide.png" alt="feature" />
+        <div>
+        <h4>Fun tours and adventures</h4>
+        <p>Hop on a safari, Enjoy a cool calm stay at the a waterpark why wait</p>
+        </div>
+    </div>
+    </section>
+
+    <section class="destination" id="destination">
+      <div class="destination_container">
+        <h2 class="section_header">Top Destinations</h2>
+        <p class="section_description">
+            Places you cant dare to miss
+        </p>
+        <div class="destination_grid">
+            <div class="destination_card">
+            <img src="IMG/Monument Des Martyrs de la pentencote.2.jpg" alt="destination" />
+        <div class="destination_content">Monument Des Martyrs de la pentencote</div>
+        </div>
+        <div class="destination_card">
+            <img src="IMG/palais du peuple kinshasa.jpg" alt="destination" />
+            <div class="destination_content">Palais Du peuple</div>
+        </div>
+        <div class="destination_card">
+            <img src="IMG/Memorial du Soldat congolais.jpg" alt="destination" />
+            <div class="destination_content">Memorial du Soldat congolais</div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="discount">
+        <div class="discount_container">
+            <h2>
+                Get upto 60% discount<br /><span>by joining us before summer</span>
+            </h2>
+            <div class="discount_btn">
+                <button class="btn">join us</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="package_container" id="package">
+        <h2 class="section_header">Featured Packages</h2>
+        <p class="section_description">
+            We have the perfect vacation spots just for you and the family
+        </p>
+        <div class="package_grid">
+            <div class="package_card">
+                <img src="img/kingakati parc De N'sele.jpg" alt="package">
+                <div class="package_card_details">
+                    <h4>Parc de vallée De la Nsele</h4>
+                    <p>
+                        Enjoy an adventures safari with multipale activities, never get bored on this thrilling ride
+                    </p>
+                    <div class="button-wrapper">
+                      <a href="https://parcdelavalleedelansele.com/" target="_blank">
+                      <button class="btn1">Book Now</button>
+                      </a>
+                      <h3>$30</h3>
+                    </div>
+                </div>
+            </div>
+              <div class="package_card">
+                <img src="img/IMG_E0534.JPG" alt="package">
+                <div class="package_card_details">
+                    <h4>King Beach</h4>
+                    <p>
+                        want to chill, go to king's beach for an exciting yet chill time with the family
+                    </p>
+                    <div class="button-wrapper">
+                      <a href="https://kings-beach-rdc.com/" target="_blank">
+                      <button class="btn1">Book Now</button>
+                      </a>
+                      <h3>$25</h3>
+                    </div>
+                </div>
+            </div>
+              <div class="package_card">
+                <img src="img/Aquasplash.jpg" alt="package">
+                <div class="package_card_details">
+                    <h4>Aquasplash</h4>
+                    <p>
+                        Feeling hot, not a probleme immerse yourself's in the cooling waters of Aquasplash
+                    </p>
+                    <div class="button-wrapper">
+                      <a href="https://aquasplashwaterpark.com/" target="_blank">
+                      <button class="btn1">Book Now</button>
+                      </a>
+                      <h3>$30</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer_container">
+            <div class="footer_col">
+                <div class="footer_logo">
+                    <a href="#" class="logo">Tourr<span>Kin</span></a>
+                </div>
+                <p>
+                    Explore kinshasa's best destination's, enjoy unbeatable priceses 
+                    and Book your FUN getaway instantly.
+                </p>
+                <h4>CONNECT WITH US</h4>
+                <ul class="footer_socials">
+                    <li>
+                        <a href="#"><i class="ri-instagram-line"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="ri-snapchat-line"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_bar">
+                Copyright © 2025 Excellence. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+
+<script src="main.js"></script>
+</body>
+</html>

@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
+:root {
+    --header-font:"Merriweather", serif;
+    --text-dark: black;
+    --text-light:#6b7280;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -11,19 +18,35 @@ body{
    background-color: white;
 }
 
+.section_header {
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    columns: var(--text-dark);
+    text-align: center;
+}
+
+.section_description {
+    font-weight: 500;
+    font-family: var(--header-font);
+    color: var(--text-light);
+    text-align: center;
+}
+
+/* the nav mainly controls the color,space-between etc of the tourrkin logo*/
+
 nav {
     display: flex;
     justify-content: space-between;
     padding: 15px 30px;
     background-color: #f8f8f8;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .nav_logo a {
     font-size: 24px;
     font-weight: bold;
     text-decoration: none;
-    color: var(--primary-color);
+    color: black;
 }
 
 .logo span {
@@ -56,22 +79,11 @@ nav {
     color: white;
 }
 
-@media (width > 540px) {
-    .header {
-        grid-template-columns: repeat(2,1fr);
-    }
-}
-
-.header {
-    grid-template-columns: repeat(3, 1fr);
-}
-
-/* this keeps the header and it spans and text inline(BEST OF KIN)*/
+/* this takes care of the header and it spans and text inline(BEST OF KIN)*/
 
 .header_container {
     text-align: center;
     padding: 5rem 2rem;
-    color: white;
 }
 
 .header_container h1 {
@@ -79,16 +91,19 @@ nav {
     font-size: 5rem;
     font-weight: 600;
     line-height: 5rem;
+    color: black;
 }
 
 .header_container h1 span {
     font-size: 5rem;
+    color: red;
 }
 
 .header_container p {
     margin-bottom: 3rem;
     font-size: 2rem;
     font-family: "Merriweather", serif;
+    color: white;
 }
 
 /* this keeps the location search bar in check ps. the gap holds the space between the location icon and the search box.*/
@@ -120,13 +135,12 @@ nav {
 
 .input_class button {
     padding: 0.75rem 1.5rem;
+    margin-bottom: 2px;
     background-color: red;
     color: white;
     border: none;
     border-radius: 5px;
     font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
 .input_class button:hover {
@@ -144,10 +158,10 @@ nav {
 
 .feature_card {
     padding: 2rem 1rem;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
     gap: 1rem;
-    background-color: white;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.05);
 }
 
@@ -167,26 +181,7 @@ nav {
     line-height: 1.5rem;
 }
 
-.destination{
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
-}
-
-.destination::before{
-    position: absolute;
-    content: "TRAVEL";
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-100%);
-    font-size: 20rem;
-    font-weight: 900;
-    line-height: 14rem;
-    letter-spacing: -30px;
-    color: white;
-    opacity: 0.2;
-    z-index: -1;
-}
+/* This one's take care of the destination card for exe: Palais Du Peuple etc*/
 
 .destination_grid{
     margin-top: 4rem;
@@ -250,10 +245,133 @@ nav {
     font-size: 2rem;
 }
 
+.btn {
+    padding: 0.75rem 1.5rem;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    color: black;
+    background-color: lightblue;
+}
+
+.package_grid {
+    margin-top: 4rem;
+    display: grid;
+    gap: 1rem;
+}
+
+.package_card {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.package_card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.package_card_details {
+    padding: 1rem;
+}
+
+.package_card_details h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.package_card_details p {
+    margin-bottom: 2rem;
+    color: var(--text-light);
+    line-height: 1.5rem;
+}
+
+.btn1 {
+    padding: 0.75rem 1.5rem;
+    margin-bottom: 2px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.package_card_details h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: var(--header-font);
+}
+
+.footer_container {
+    display: grid;
+    gap: 4rem 2rem;
+    margin-top: 3rem;
+    text-align: center;
+}  
+
+.footer_logo a {
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.footer_logo a span {
+    color: red;
+}
+
+.footer_col p {
+    margin-block: 1rem;
+    font-family: var(--header-font);
+    color: var(--text-light);
+    line-height: 1.5rem;
+}
+
+.footer_col h4 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.footer_socials {
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer_socials a {
+    font-size: 1.25rem;
+    color: black;
+}
+
+.footer_socials a:hover {
+    color: red;
+}
+
+.footer_bar {
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    text-align: center;
+}
+
+
 /* the media rule is used to create responsive designes making the website layout able to adapt to diffrent screen and sizes like (phones and tablets etc).*/
 
 
 @media (width > 540px) {
+       .header {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .feature_container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -262,17 +380,28 @@ nav {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .package_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
 
 @media (width > 768px) {
+    .header {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     .feature_container {
     grid-template-columns: repeat(3, 1fr);
 }
 
-.destination_grid {
+    .destination_grid {
     grid-template-columns: repeat(3, 1fr);
 }
-    
+
+    .package_grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 @media (width > 1024px) {
